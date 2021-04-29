@@ -48,13 +48,15 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    adapter: 'sails-mysql',
-    host: 'localhost',
-    user: 'root', //optional
-    password: 'shadowfax', //optional
-    database: 'multi', //optional
-    port: 3306
+    adapter: 'sails-mongo',
+    url : 'mongodb://localhost:27017/multi?socketTimeoutMS=90000',
+    database: 'multi', 
+  },
+  tenant1: {
 
+    adapter: 'sails-mongo',
+    url : 'mongodb://localhost:27017/tenant1?socketTimeoutMS=90000',
+    database: 'tenant1', 
   },
 
 
